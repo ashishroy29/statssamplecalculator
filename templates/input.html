@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Stratified Sampling Input</title>
+  </head>
+  <body>
+    <h1>Stratified Sampling Input</h1>
+    <form method="POST" action="/">
+      <label for="baseline_rate">Baseline Conversion Rate (Control Group):</label>
+      <input type="number" step="0.01" id="baseline_rate" name="baseline_rate" required><br><br>
+      <label for="effect_size">Expected Minimum Detectable Effect Size:</label>
+      <input type="number" step="0.01" id="effect_size" name="effect_size" required><br><br>
+      <label for="power">Desired Statistical Power:</label>
+      <input type="number" step="0.01" id="power" name="power" required><br><br>
+      <label for="alpha">Significance Level (Alpha):</label>
+      <input type="number" step="0.01" id="alpha" name="alpha" required><br><br>
+      <label for="population_size">Custom Population Size:</label>
+      <input type="number" id="population_size" name="population_size" required><br><br>
+      <label for="strata_factors">Stratified Sampling Factors (comma-separated):</label>
+      <input type="text" id="strata_factors" name="strata_factors" required><br><br>
+      <label for="{{ factor }}_proportions">{{ factor }} Proportions (comma-separated):</label>
+      <input type="text" id="{{ factor }}_proportions" name="{{ factor }}_proportions" required><br><br>
+      <input type="submit" value="Calculate Adjusted Sample Sizes">
+    </form>
+  </body>
+</html>
